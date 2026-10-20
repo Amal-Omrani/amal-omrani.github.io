@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amal Omrani</title>
+<meta name="description" content="Amal Omrani, applied mathematician: applied probability and mathematical modelling for risk management under market frictions and model uncertainty. CEREMADE, Université Paris Dauphine-PSL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0a3d62; --link: #1565c0; --accent: #1e90ff;
+    --text: #2d3436; --muted: #5f7a99;
+    --bg: #f7fbff; --card: #ffffff; --border: #d6eaff; --soft: #e1f0ff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #cfe4ff; --link: #7db8ff; --accent: #4aa8ff;
+      --text: #e3e8ee; --muted: #93a7bd;
+      --bg: #0d1520; --card: #131e2c; --border: #233650; --soft: #1a2a3f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 "Inter", system-ui, sans-serif; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+
+  nav { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--border); }
+  nav .wrap { display: flex; gap: 20px; overflow-x: auto; padding-top: 12px; padding-bottom: 12px; font-size: 14px; font-weight: 500; }
+  nav a { color: var(--muted); white-space: nowrap; }
+  nav a:hover { color: var(--primary); text-decoration: none; }
+
+  header { display: grid; grid-template-columns: 150px 1fr; gap: 30px; align-items: center; padding: 46px 0 30px; border-bottom: 1px solid var(--border); }
+  header img { width: 150px; height: 188px; object-fit: cover; object-position: 62% 20%; border-radius: 4px; border: 1px solid var(--border); }
+  h1 { font-family: "Crimson Pro", Georgia, serif; font-weight: 600; font-size: 2.6rem; line-height: 1.05; margin: 0 0 8px; color: var(--primary); }
+  .role { margin: 0; color: var(--text); }
+  .role.muted { color: var(--muted); font-size: 15px; }
+  .contact { margin-top: 14px; font-size: 15px; }
+  .contact a + a::before { content: "·"; color: var(--muted); margin: 0 9px; }
+
+  section { padding: 34px 0 6px; scroll-margin-top: 54px; }
+  h2 { font-family: "Crimson Pro", Georgia, serif; font-weight: 600; font-size: 1.75rem; color: var(--primary); margin: 0 0 14px; padding-bottom: 6px; border-bottom: 2px solid var(--soft); }
+  h3 { font-family: "Crimson Pro", Georgia, serif; font-weight: 600; font-size: 1.25rem; color: var(--primary); margin: 26px 0 8px; }
+  p { margin: 0 0 13px; }
+  .muted { color: var(--muted); }
+
+  .news { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 4px; padding: 10px 16px; margin: 6px 0 0; font-size: 15px; }
+  .news div { display: grid; grid-template-columns: 82px 1fr; padding: 2px 0; }
+  .news .d { color: var(--muted); font-size: 14px; padding-top: 1px; }
+
+  .themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0 6px; }
+  .theme { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 14px 16px; font-size: 14.5px; }
+  .theme b { display: block; font-family: "Crimson Pro", Georgia, serif; font-size: 1.12rem; line-height: 1.3; color: var(--primary); margin-bottom: 6px; }
+  .theme .refs { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; }
+
+  ol.pubs { list-style: none; padding: 0; margin: 0; }
+  ol.pubs li { display: grid; grid-template-columns: 38px 1fr; padding: 9px 0; }
+  ol.pubs .n { color: var(--muted); font-size: 14px; padding-top: 1px; }
+  .pt { font-weight: 600; }
+  .pa, .pv { color: var(--muted); font-size: 14.5px; }
+  .status { display: inline-block; font-size: 12px; font-weight: 600; padding: 0 8px; border-radius: 3px; background: var(--soft); color: var(--primary); margin-left: 4px; vertical-align: 1px; }
+  .plinks { font-size: 14px; }
+
+  .item { display: grid; grid-template-columns: 110px 1fr; gap: 2px 20px; padding: 7px 0; }
+  .item .when { color: var(--muted); font-size: 14px; padding-top: 2px; }
+  .item .what b { font-weight: 600; }
+  .item .what span { color: var(--muted); font-size: 14.5px; }
+
+  .countries { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .countries span { font-size: 13px; padding: 1px 10px; border-radius: 3px; background: var(--soft); color: var(--primary); }
+  .talks { display: grid; grid-template-columns: 90px 1fr auto; gap: 0 20px; font-size: 15px; }
+  .talks > div { padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .talks .when { color: var(--muted); font-size: 14px; }
+  .talks .where { color: var(--muted); text-align: right; white-space: nowrap; font-size: 14px; }
+
+  footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 22px 0 40px; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 640px) {
+    header { grid-template-columns: 1fr; gap: 18px; padding-top: 30px; }
+    header img { width: 120px; height: 150px; }
+    h1 { font-size: 2.1rem; }
+    .themes { grid-template-columns: 1fr; }
+    .item { grid-template-columns: 1fr; gap: 0; }
+    .talks { grid-template-columns: 1fr; }
+    .talks > div { border-bottom: 0; padding: 0; }
+    .talks .when { padding-top: 8px; }
+    .talks .where { text-align: left; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#software">Software</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#talks">Talks</a>
+  <a href="cv.pdf">CV</a>
+</div></nav>
+
+<main class="wrap">
+
+<header>
+  <img src="portrait.jpg" alt="Portrait of Amal Omrani" width="782" height="1100">
+  <div>
+    <h1>Amal Omrani</h1>
+    <p class="role">PhD in Applied Mathematics · CEREMADE, Université Paris Dauphine-PSL</p>
+    <p class="role muted">PhD defence 17 November 2026 · ATER from December 2026</p>
+    <div class="contact">
+      <a href="mailto:omrani@ceremade.dauphine.fr">omrani@ceremade.dauphine.fr</a><a href="cv.pdf">CV</a><a href="https://github.com/Amal-Omrani">GitHub</a><a href="https://arxiv.org/search/?searchtype=author&amp;query=Omrani%2C+Amal">arXiv</a><a href="https://www.linkedin.com/in/amal-omrani/">LinkedIn</a>
+      <!-- TODO: add ORCID and Google Scholar once created -->
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I am an applied mathematician at CEREMADE, Université Paris Dauphine-PSL, where I defend my PhD on 17 November 2026 under the supervision of <a href="https://sites.google.com/view/emmanuel-lepinette/research-cv-and-others">Emmanuel Lepinette</a>. From December 2026 I am an ATER (temporary lecturer and researcher) at Paris Dauphine-PSL.</p>
+  <p>My research is in applied probability and mathematical modelling for risk management under market frictions and model uncertainty. My thesis gives explicit super-hedging prices and strategies for markets with proportional transaction costs; the model needs no probability law for prices, only the range of their moves, and the resulting algorithm is checked against exact benchmarks, tested on S&amp;P 500 data and released as open-source software.</p>
+  <p>Before my PhD, I taught algebra full-time for four years as <em>professeure agrégée</em> at the Preparatory Institute for Engineering Studies of Monastir, after ranking 3rd in the agrégation. I hold a Master in Mathematics and Applications from the Université de Monastir, where I ranked 1st, with a thesis on Gaussian processes at LIMOS, Université Clermont Auvergne.</p>
+  <div class="news">
+    <div><span class="d">Nov 2026</span>PhD defence, <em>Explicit Computation of Super-Hedging Prices and Strategies under Transaction Costs</em></div>
+    <div><span class="d">Oct 2026</span>Talk at the <a href="https://www.ihp.fr/fr/agenda/tba-34">FiME PhD Seminar</a>, Institut Henri Poincaré, Paris</div>
+    <div><span class="d">Sept 2026</span>Co-organised <a href="https://rgosa.net/conferences/cosa-2026/">COSA 2026</a> at CIRM, Marseille</div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <p>I combine stochastic analysis, convex duality and dynamic programming with numerical methods, open-source software and validation on real data.</p>
+  <div class="themes">
+    <div class="theme"><b>Explicit hedging under costs</b>Recursive closed-form super-hedging prices and the interval of all optimal hedges in discrete time, calibrated and tested on market data.<span class="refs">Papers [1], [3]</span></div>
+    <div class="theme"><b>Continuous time</b>A dynamic programming principle in Kabanov's solvency-cone model, and the path towards a path-dependent HJB–QVI.<span class="refs">Paper [6]</span></div>
+    <div class="theme"><b>Random sets and ordered structures</b>Conditional random sets in Polish spaces; concentration inequalities in Riesz spaces.<span class="refs">Papers [2], [4], [7]</span></div>
+  </div>
+  <p class="muted">Broader interests: stochastic control, Monte Carlo methods, uncertainty quantification and probabilistic machine learning.</p>
+</section>
+
+<section id="publications">
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li><span class="n">[1]</span><div><span class="pt">Explicit recursive construction of super-replication prices under proportional transaction costs</span><br>
+      <span class="pa">E. Lepinette, A. Omrani</span> · <span class="pv"><em>Stochastics</em></span> <span class="status">under revision</span><br>
+      <span class="plinks"><a href="https://hal.science/hal-05347450">hal-05347450</a> · <a href="https://arxiv.org/abs/2503.02419">arXiv:2503.02419</a> · <a href="https://github.com/Amal-Omrani/superhedging-transaction-Costs">code</a></span></div></li>
+    <li><span class="n">[2]</span><div><span class="pt">Chernoff's inequality in Riesz spaces</span><br>
+      <span class="pa">M. A. Ben Amor, A. Omrani</span> · <span class="pv"><em>Quaestiones Mathematicae</em> 46(9), 1777–1787, 2023</span><br>
+      <span class="plinks"><a href="https://doi.org/10.2989/16073606.2022.2113474">doi:10.2989/16073606.2022.2113474</a></span></div></li>
+    <li><span class="n">[3]</span><div><span class="pt">Computation of the super-hedging strategies for vanilla options with transaction costs</span><br>
+      <span class="pa">E. Lepinette, A. Omrani</span> · <span class="pv"><em>Mathematics and Financial Economics</em></span> <span class="status">under revision</span><br>
+      <span class="plinks"><a href="https://hal.science/hal-05626560">hal-05626560</a> · <a href="https://github.com/Amal-Omrani/Superhedging-Empirical-SP500">SPY study</a> · <a href="https://github.com/Amal-Omrani/Model-Free-Super-hedging-of-Vanilla-Options-under-Transaction-Costs">strategies</a></span></div></li>
+    <li><span class="n">[4]</span><div><span class="pt">Conditional random sets in Polish spaces with applications to the Skorokhod space</span><br>
+      <span class="pa">E. Lepinette, A. Omrani</span> · <span class="pv"><em>Journal of Mathematical Analysis and Applications</em></span> <span class="status">under revision</span><br>
+      <span class="plinks"><a href="https://hal.science/hal-05623197">hal-05623197</a></span></div></li>
+    <li><span class="n">[5]</span><div><span class="pt">Reduced run-time and memory complexity regression with a Gaussian process prior</span><br>
+      <span class="pa">A. Omrani, A. Fradi, C. Samir</span> · <span class="pv">Conference paper, 55es Journées de Statistique, Bordeaux, 2024</span><br>
+      <span class="plinks"><a href="https://jds2024.sciencesconf.org/528096">paper</a> · <a href="https://github.com/anisfradi/Reduced-Run-Time-and-Memory-Complexity-of-GP">code</a></span></div></li>
+  </ol>
+  <h3>In preparation</h3>
+  <ol class="pubs">
+    <li><span class="n">[6]</span><div><span class="pt">Continuous-time markets with transaction costs: superhedging, dynamic programming, and path-dependent HJB–QVI</span><br>
+      <span class="pa">E. Lepinette, A. Omrani, W. Yan</span></div></li>
+    <li><span class="n">[7]</span><div><span class="pt">Order-valued Bennett and Hoeffding inequalities in Riesz spaces</span><br>
+      <span class="pa">M. A. Ben Amor, A. Omrani</span></div></li>
+  </ol>
+  <h3>PhD thesis</h3>
+  <p><em>Explicit Computation of Super-Hedging Prices and Strategies under Transaction Costs</em>, Université Paris Dauphine-PSL, defence 17 November 2026.<br><span class="muted">Jury: M. Rosenbaum (president), G. Di Nunno and L. Campi (referees), Y. Kabanov, E. Hubert, E. Lepinette (advisor).</span></p>
+</section>
+
+<section id="software">
+  <h2>Software</h2>
+  <div class="item"><div class="when">Library</div><div class="what"><b>superhedge</b> (with W. Yan): Python library for pricing and hedging options under transaction costs from bounded returns only: minimal capital, admissible hedges, calibration and backtesting, checked against exact benchmarks. <a href="https://github.com/Yan-Wenbin/Robust_option_pricing_and_hedging_under_transaction_costs">GitHub</a></div></div>
+  <div class="item"><div class="when">Paper [1]</div><div class="what">Explicit recursion and optimal strategies, with a rolling backtest on SPY data and a sensitivity study. <a href="https://github.com/Amal-Omrani/superhedging-transaction-Costs">GitHub</a></div></div>
+  <div class="item"><div class="when">Paper [3]</div><div class="what">Empirical study on SPY data, 2020–2026 (<a href="https://github.com/Amal-Omrani/Superhedging-Empirical-SP500">GitHub</a>), and a numerical study of the optimal strategies for calls and puts (<a href="https://github.com/Amal-Omrani/Model-Free-Super-hedging-of-Vanilla-Options-under-Transaction-Costs">GitHub</a>).</div></div>
+  <div class="item"><div class="when">Paper [5]</div><div class="what">Gaussian-process regression with clustering for large data sets (with A. Fradi). <a href="https://github.com/anisfradi/Reduced-Run-Time-and-Memory-Complexity-of-GP">GitHub</a></div></div>
+</section>
+
+<section id="teaching">
+  <h2>Teaching</h2>
+  <div class="item"><div class="when">2026–27</div><div class="what"><b>Monte Carlo Methods</b> (Master 1), Paris Dauphine-PSL <span>· 2 computer-lab groups in R and 2 tutorial groups · <a href="https://sites.google.com/view/monte-carlo-methods">course materials</a></span></div></div>
+  <div class="item"><div class="when">Spring 2027</div><div class="what"><b>Statistics</b> (Bachelor L3), Paris Dauphine-PSL <span>· scheduled</span></div></div>
+  <div class="item"><div class="when">2025–26</div><div class="what"><b>Introduction to Finance</b> (Bachelor), Paris Dauphine-PSL <span>· derivatives and options (30 students, 40h)</span></div></div>
+  <div class="item"><div class="when">2024–25</div><div class="what"><b>Statistics</b> (Bachelor L2), Paris Dauphine-PSL <span>· lectures and tutorials, design of the assessments (30 students, 50h)</span></div></div>
+  <div class="item"><div class="when">2024–25</div><div class="what"><b>AI Projects</b>, Paris Dauphine-PSL <span>· supervision of student projects in data analysis with AI methods, in Python (30 students, 15h)</span></div></div>
+  <div class="item"><div class="when">2019–23</div><div class="what"><b>Algebra I &amp; II</b>, IPEIM Monastir <span>· full responsibility for lectures, tutorials and exams (60 students/year, 18h/week); grader for the national engineering-school entrance exams</span></div></div>
+  <h3>Supervision</h3>
+  <div class="item"><div class="when">2026–27</div><div class="what">Master's thesis: <em>Monte Carlo methods for PDEs: random walks and the Dirichlet problem</em></div></div>
+</section>
+
+<section id="talks">
+  <h2>Talks</h2>
+  <div class="countries"><span>France</span><span>Italy</span><span>Portugal</span><span>Spain</span><span>Netherlands</span><span>Tunisia</span><span>South Africa</span></div>
+  <div class="talks">
+    <div class="when">Oct 2026</div><div><a href="https://www.ihp.fr/fr/agenda/tba-34">FiME PhD Seminar</a>, Institut Henri Poincaré</div><div class="where">Paris, France</div>
+    <div class="when">Sept 2026</div><div><a href="https://rgosa.net/conferences/cosa-2026/">COSA 2026</a>, CIRM</div><div class="where">Marseille, France</div>
+    <div class="when">June 2026</div><div><a href="https://eventi.unibo.it/bachelier">13th Bachelier World Congress</a></div><div class="where">Bologna, Italy</div>
+    <div class="when">Mar 2026</div><div><a href="https://www.ceremade.dauphine.fr/fileadmin/mediatheque/ceremade/evenements/3rd_year_phd_2026/Amal_Omrani__-Third_year_PhD_students.pdf">CEREMADE Third-Year PhD Day</a></div><div class="where">Paris, France</div>
+    <div class="when">Oct 2025</div><div><a href="https://conference2025.streamlit.app">Stochastics in Mathematical Finance and Physics (SMFP 2025)</a></div><div class="where">Hammamet, Tunisia</div>
+    <div class="when">Sept 2025</div><div><a href="https://scf2025.iseg.ulisboa.pt/">Stochastics &amp; Computational Finance (SCF 2025)</a></div><div class="where">Lisbon, Portugal</div>
+    <div class="when">June 2025</div><div><a href="https://www.ceremade.dauphine.fr/fr/actualites/young-researchers-days-2025.html">Young Researchers' Days</a>, CEREMADE</div><div class="where">Paris, France</div>
+    <div class="when">Apr 2025</div><div><a href="https://qfw2025.community.unipa.it/">XXVI Workshop on Quantitative Finance (QFW 2025)</a></div><div class="where">Palermo, Italy</div>
+    <div class="when">Jan 2025</div><div><a href="https://colloque-bachelier25.sciencesconf.org/?lang=en">17th Bachelier Colloquium</a></div><div class="where">Métabief, France</div>
+    <div class="when">May 2024</div><div><a href="https://jds2024.sciencesconf.org">55es Journées de Statistique (JDS 2024)</a></div><div class="where">Bordeaux, France</div>
+    <div class="when">Oct 2022</div><div><a href="https://sites.google.com/view/faotsa22/home">Functional Analysis and Operator Theory South Africa Workshop (FAOTSA22)</a> <span class="muted">· Chernoff's inequality in Riesz spaces</span></div><div class="where">Kruger National Park, South Africa</div>
+  </div>
+
+  <h3>Schools and seminars attended</h3>
+  <div class="talks">
+    <div class="when">Jan 2026</div><div><a href="https://staff.fnwi.uva.nl/a.khedher/winterschool/winterschool.html">23rd Winter School on Mathematical Finance</a></div><div class="where">Soesterberg, Netherlands</div>
+    <div class="when">July 2025</div><div><a href="https://www.crm.cat/5th-barcelona-summer-school-of-stochastic-analysis-and-quantitative-finance/">5th Barcelona Summer School of Stochastic Analysis and Quantitative Finance</a> <span class="muted">· rough volatility, signatures, weather derivatives</span></div><div class="where">Barcelona, Spain</div>
+    <div class="when">June 2024</div><div><a href="https://www.cimpa.info/fr/ecoles/ordered-structures-and-their-applications-finance-and-machine-learning">CIMPA School: Ordered structures in finance and machine learning</a></div><div class="where">Sousse, Tunisia</div>
+    <div class="when">Regular</div><div><a href="http://www.bachelier-paris.fr">Bachelier Seminar</a></div><div class="where">Paris, France</div>
+  </div>
+</section>
+
+<section id="service">
+  <h2>Service</h2>
+  <div class="item"><div class="when">2026</div><div class="what">Co-organizer, <a href="https://rgosa.net/conferences/cosa-2026/">COSA 2026</a>, International Conference on Ordered Structures and Applications, CIRM, Marseille <span>· supported by the Natixis Foundation and CIRM</span></div></div>
+  <div class="item"><div class="when">2024–25</div><div class="what">Co-organizer, <a href="https://www.ceremade.dauphine.fr/fr/actualites/young-researchers-days-2025.html">Young Researchers' Days</a>, CEREMADE</div></div>
+</section>
+
+</main>
+
+<footer><div class="wrap">Amal Omrani · CEREMADE, Université Paris Dauphine-PSL, Place du Maréchal de Lattre de Tassigny, 75016 Paris · Last updated October 2026</div></footer>
+</body>
+</html>
