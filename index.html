@@ -112,6 +112,11 @@
 
   .role { margin: 0; }
 
+  .bio {
+    margin: 0;
+    max-width: 60ch;
+  }
+
   .contact {
     margin-top: 12px;
     font-size: 15px;
@@ -217,9 +222,9 @@
 
 <nav>
   <div class="wrap">
-    <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
     <a href="#teaching">Teaching</a>
     <a href="#talks">Talks</a>
     <a href="#service">Service</a>
@@ -237,8 +242,12 @@
 
   <div>
     <h1>Amal Omrani</h1>
-    <p class="role">Applied Mathematics · Mathematical Finance</p>
-    <p class="role muted">CEREMADE, Université Paris Dauphine-PSL</p>
+    <p class="bio">
+      I am a PhD candidate in applied mathematics at CEREMADE, Université
+      Paris Dauphine-PSL.
+      I work on stochastic modelling for quantitative finance.
+      I am interested in climate change and green finance.
+    </p>
 
     <div class="contact">
       <a href="mailto:omrani@ceremade.dauphine.fr">Email</a>
@@ -250,35 +259,12 @@
   </div>
 </header>
 
-<section id="about">
-  <h2>About me</h2>
-
-  <p>
-    I am a PhD candidate in applied mathematics at CEREMADE,
-    Université Paris Dauphine-PSL, under the supervision of
-    <a href="https://sites.google.com/view/emmanuel-lepinette/research-cv-and-others">Emmanuel Lepinette</a>.
-    I work in mathematical finance and probability, developing explicit,
-    computable methods for hedging under transaction costs.
-  </p>
-
-  <p>
-    I studied at the École Normale Supérieure de Tunis and ranked third
-    in the 2019 national agrégation in mathematics. I then taught
-    mathematics for four years as a <em>professeure agrégée</em> at the
-    Preparatory Institute for Engineering Studies of Monastir, Tunisia.
-    I also hold a Master's degree in Mathematics and Applications from
-    the Université de Monastir (2023), where I graduated first in my
-    cohort, with a thesis on Gaussian processes carried out at LIMOS,
-    Université Clermont Auvergne.
-  </p>
-</section>
-
 <section id="research">
-  <h2>Research</h2>
+  <h2>Research interests</h2>
 
   <p>
     My work draws on stochastic analysis, convex analysis and dynamic
-    programming, and is organised around two themes:
+    programming, and is organised around the following themes:
   </p>
 
   <ul>
@@ -295,6 +281,14 @@
       conditional random sets in Polish spaces, with applications to
       the Skorokhod space [4], and concentration inequalities in
       Riesz spaces [2, 7].
+    </li>
+
+    <li>
+      <b>Climate and energy (next directions):</b>
+      robust pricing and hedging of weather and energy derivatives in
+      incomplete, illiquid markets; carbon markets and transition risk
+      under policy uncertainty; and climate-economy models under model
+      uncertainty.
     </li>
   </ul>
 </section>
@@ -385,12 +379,38 @@
     </li>
   </ol>
 
-  <h3>PhD thesis</h3>
+</section>
 
-  <p>
-    <em>Explicit Computation of Super-Hedging Prices and Strategies
-    under Transaction Costs</em>, Université Paris Dauphine-PSL, 2026.
-  </p>
+<section id="education">
+  <h2>Education</h2>
+
+  <ul class="list">
+    <li>
+      <span class="when">2023–26</span>
+      <span>
+        <b>PhD in Applied Mathematics</b>, Université Paris Dauphine-PSL (CEREMADE).
+        Thesis: <em>Explicit Computation of Super-Hedging Prices and Strategies
+        under Transaction Costs</em>. Advisor: E. Lepinette.
+      </span>
+    </li>
+
+    <li>
+      <span class="when">2022–23</span>
+      <span>
+        <b>Master in Mathematics and Applications</b>, Université de Monastir
+        (ranked 1st). Thesis on Gaussian processes at LIMOS, Université
+        Clermont Auvergne.
+      </span>
+    </li>
+
+    <li>
+      <span class="when">2019</span>
+      <span>
+        <b>Agrégation in Mathematics</b>, École Normale Supérieure de Tunis
+        (ranked 3rd).
+      </span>
+    </li>
+  </ul>
 </section>
 
 <section id="teaching">
